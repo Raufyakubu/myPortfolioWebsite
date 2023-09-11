@@ -1,0 +1,312 @@
+*{
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    background-color: black;
+    color: white;
+}
+.header {
+    background: linear-gradient(rgb(8,15,25,0.5),rgb(8,15,25,0.5)),url("img/rauf3.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    color: white;
+}
+.container {
+    padding: 10px 10%;
+}
+.logo {
+    font-size: 25px;
+}
+.logo span {
+    color: red;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul li {
+    list-style: none;
+    display: inline;
+    margin: 10px 20px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: cyan;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after {
+    width: 100%;
+}
+.header-text {
+    margin-top: 10%;
+    font-size: 34px;
+    padding: 10px;
+}
+.header-text p {
+    padding-left: 10%;
+}
+.header-text h1 {
+    margin-top: 20px;
+    font-size: 60px;
+}
+.header-text h1 span {
+    color: cyan;
+}
+
+/*----------------------About--------------*/
+#About {
+    padding: 50px 0;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.col-about-1 {
+    flex-basis: 30%;
+    position: relative;
+    overflow: hidden;
+}
+.col-about-1 img{
+    width: 100%;
+    border-radius: 15px;
+    display: block;
+}
+.col-about-1 p {
+    background-color: rgb(28, 211, 211);
+    width: 100%;
+    height: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    transition: height 0.5s;
+    font-size: 20px;
+    font-weight: 400;
+    border-radius: 15px;
+}
+.col-about-1:hover p {
+    height: 10%;
+}
+.col-about-2 {
+    flex-basis: 65%;
+}
+.sub-title {
+    font-size: 60px;
+    font-weight: 600;
+}
+.discription {
+    text-align: justify;
+}
+.tab-titles {
+    display: flex;
+    margin: 30px 0 30px;
+}
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    cursor: pointer;
+}
+.tab-links::after {
+    content: '';
+    background-color: cyan;
+    width: 0;
+    height: 3px;
+    transition: 0.5s;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+}
+.tab-links.active-link::after {
+    width: 50%;
+}
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span {
+    font-size: 15px;
+    font-weight: 300px;
+    color: rgb(28, 211, 211);
+}
+.tab-contents {
+    display: none;
+}
+.tab-contents.active-tab {
+    display: block;
+}
+
+/*----------------------Services--------------*/
+.service-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.service-list h2 {
+    margin: 20px 0;
+}
+.service-list div {
+    flex-basis: 30%;
+    background-color: #262626;
+    border-radius: 10px;
+    padding: 10px 20px;
+    transition: background 0.5s, transform 0.5s;
+
+}
+.service-list div a {
+    text-decoration: none;
+    font-size: 12px;
+    margin: 15px 0;
+    display: inline-block;
+    color: white;
+}
+.service-list div i {
+    font-size: 30px;
+    margin: 15px 0;
+}
+.service-list div:hover {
+    background-color: rgb(28, 211, 211);
+    transform: translateY(-10px);
+}
+
+/*----------------------Portfolio------------*/
+#portfolio {
+    margin: 50px 0;
+}
+.work-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.work {
+    flex-basis: 30%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+}
+.work img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgb(0,0,0,0.4), rgb(28, 211, 211));
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 0 40px;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+.layer h3 {
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.layer a {
+    background-color: white;
+    color: rgb(28, 211, 211);
+    text-decoration: none;
+    font-size: 18px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+.work:hover img {
+    transform: scale(1.1);
+}
+.work:hover .layer {
+    height: 100%;
+}
+.btn {
+    display: block;
+    border-radius: 10px;
+    padding: 5px 25px;
+    margin: 40px auto;
+    width: fit-content;
+    border: 3px rgb(28, 211, 211) solid;
+    text-decoration: none;
+    color: white;
+    transition: background 0.5s;
+}
+.btn:hover {
+    background: rgb(28, 211, 211);
+}
+
+/*----------------------Contact------------*/
+.contact-left {
+    flex-basis: 35%;
+}
+.contact-right {
+    flex-basis: 60%;
+}
+.contact-left p {
+    margin-top: 20px;
+}
+.btn.btn2 {
+    font-weight: 500;
+    background-color: rgb(28, 211, 211);
+    display: inline-block;
+    border-radius: 10px;
+}
+.contact-right form {
+    width: 100%;
+}
+form input, form textarea {
+    width: 100%;
+    margin-top: 15px;
+    background-color: #262626;
+    outline: none;
+    border: 0;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+}
+form .btn2 {
+    margin-top: 20px;
+}
+footer p{
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 300;
+    background-color: #262626;
+    padding: 20px 0;
+}
