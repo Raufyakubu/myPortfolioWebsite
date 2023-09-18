@@ -8,8 +8,11 @@ body {
     background-color: black;
     color: white;
 }
-.header {
-    background: linear-gradient(rgb(8,15,25,0.5),rgb(8,15,25,0.5)),url("img/rauf3.jpg");
+html {
+    scroll-behavior: smooth;
+}
+#header {
+    background: linear-gradient(rgb(8,15,25,0.5),rgb(8,15,25,0.5)),url("img/raufbackground2.jpg");
     background-position: center;
     background-size: cover;
     width: 100%;
@@ -278,12 +281,31 @@ nav ul li a:hover::after {
 }
 .contact-left p {
     margin-top: 20px;
+
+}
+.contact-left p i{
+    font-size: 18px;
+    color: rgb(28, 211, 211);
+    margin-right: 10px;
 }
 .btn.btn2 {
     font-weight: 500;
     background-color: rgb(28, 211, 211);
     display: inline-block;
     border-radius: 10px;
+}
+.social-media {
+    margin-top: 20px;
+}
+.social-media i {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    margin: 5px;
+    transition: 0.5s;
+}
+.social-media i:hover {
+    color: rgb(28, 211, 211);
 }
 .contact-right form {
     width: 100%;
@@ -301,6 +323,8 @@ form input, form textarea {
 form .btn2 {
     margin-top: 20px;
 }
+
+/*----------------------Footer------------*/
 footer p{
     width: 100%;
     margin-top: 20px;
@@ -309,4 +333,79 @@ footer p{
     font-weight: 300;
     background-color: #262626;
     padding: 20px 0;
+}
+
+.Menu{
+    display: none;
+}
+/*----------------------Reponsive on smaller screens------------*/
+@media only screen and (max-width: 768px){
+    #header {
+        background: linear-gradient(rgb(8,15,25,0.5),rgb(8,15,25,0.5)),url("img/rauf3.jpg");
+        background-size: cover;
+    }
+    .header-text {
+        margin-top: 50%;
+    }
+    .header-text h1 {
+        font-size: 50px;
+    }
+    .header-text p {
+        font-size: 20px;
+    }
+    .Menu {
+        display: block;
+    }
+    nav ul {
+        background-color: rgb(28, 211, 211);
+        width: 150px;
+        height: 100vh;
+        position: fixed;
+        right: -150px;
+        top: 0;
+        display: block;
+        z-index: 2;
+        padding-top: 35px;
+        transition: right 0.6s;
+    }
+    nav ul li{
+        display: block;
+        margin: 15px;
+        font-size: 20px;
+        font-weight: 400;
+    }
+    nav ul p{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        font-size: 25px;
+        margin: 15px;
+    }
+    .col-about-1, .col-about-2 {
+        flex-basis: 100%;
+    }
+    .col-about-1 {
+        margin-bottom: 10px;
+    }
+    .col-about-2 {
+        font-size: 14px;
+    }
+    .sub-title {
+        font-size: 40px;
+        text-align: center;
+    }
+    .service-list {
+        flex-direction: column;
+        gap: 2em;
+    }
+    .tab-links {
+        margin-right: 20px;
+    }
+    .work-list {
+        flex-direction: column;
+        gap: 2em;
+    }
+    .contact-left, .contact-right {
+        flex-basis: 100%;
+    }
 }

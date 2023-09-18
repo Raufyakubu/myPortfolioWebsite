@@ -11,27 +11,31 @@
     </script>
 </head>
 <body>
-    <div class="header">
+    <div id="header">
         <div class="container">
             <nav>
                 <p class="logo"><span>De</span>Journey</p>
-                <ul>
-                    <li><a href="Home">Home</a></li>
-                    <li><a href="About">About</a></li>
-                    <li><a href="Service">Service</a></li>
-                    <li><a href="Porfolio">Portfolio</a></li>
-                    <li><a href="Contact">Contact</a></li>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Service</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <p onclick="closemenu()" class="Menu"><i class="fa-solid fa-xmark"></i></i></p>
+                    <!-------closemenu------->
                 </ul>
+                <p onclick="openmenu()" class="Menu"><i class="fa-solid fa-bars"></i></p>
+                <!-------openmenu------->
             </nav>
         </div>
         <div class="header-text">
             <p>Web Designer</p>
-            <h1>Hi, I'm <span>Rauf</span> and I <br> love  everything<br> tech.</h1>
+            <h1>Hi, I'm <span>Rauf</span> and I love <br> everything tech.</h1>
         </div>
     </div>
 
     <!-------------- ABOUT ------------------->
-    <div id="About">
+    <div id="about">
         <div class="container">
             <div class="row">
                 <div class="col-about-1">
@@ -39,7 +43,7 @@
                     <p>Yakubu Rauf Ali</p>
                 </div>
                 <div class="col-about-2">
-                    <h1 class="sub-titie">About Me</h1>
+                    <h1 class="sub-title">About Me</h1>
                     <p class="discription">This section consists of the background to the research that provides the summary of Electronic Health Records, 
                         their operation, and their effect on quality of care. The research problem statement discusses the limitation 
                         in the literature of the analysis of Electronic Health Records. The objective of the literature gives a clear 
@@ -83,7 +87,7 @@
 <!---------------------Services------------------------------>
     <div id="services">
         <div class="container">
-            <h1 class="sub-titie">My Services</h1>
+            <h1 class="sub-title">My Services</h1>
             <div class="service-list">
                 <div>
                     <i class="fa-solid fa-crop-simple"></i>
@@ -110,7 +114,7 @@
 <!---------------------Portfolio----------------------------->
     <div id="portfolio">
         <div class="container">
-            <h1 class="sub-titie">My Works</h1>
+            <h1 class="sub-title">My Works</h1>
             <div class="work-list">
                 <div class="work">
                     <img src="img/mobile1.jpg" alt="">
@@ -150,13 +154,13 @@
             <div class="row">
                 <div class="contact-left">
                     <h1 class="sub-titie">Contact Me</h1>
-                    <p>raufyakubu10@gmail.com</p>
-                    <p>0594807470</p>
+                    <p><i class="fa-solid fa-paper-plane"></i>raufyakubu10@gmail.com</p>
+                    <p><i class="fa-solid fa-phone-volume"></i>0594807470</p>
                     <div class="social-media">
-                        <a href=""></a>
-                        <a href=""></a>
-                        <a href=""></a>
-                        <a href=""></a>
+                        <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-square-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                        <a href=""><i class="fa-brands fa-square-instagram"></i></a>
                     </div>
                     <a href="img/barriers.pdf" download="myCV" class="btn btn2">Download CV</a>
                 </div>
@@ -188,6 +192,17 @@
             }
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <script>
+        var sidemeu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemeu.style.right = "0";
+        }
+        function closemenu(){
+            sidemeu.style.right = "-200px";
         }
     </script>
     
