@@ -409,3 +409,8 @@ footer p{
         flex-basis: 100%;
     }
 }
+#popUp {
+    display: block;
+    margin-top: -35px;
+    color: #61b752;
+}
