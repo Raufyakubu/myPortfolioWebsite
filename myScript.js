@@ -24,8 +24,8 @@ var sidemeu = document.getElementById("sidemenu");
         sidemeu.style.right = "-200px";
     }
 
-/*Contact form: the details of the user is sent to a google sheet file*/
-  const scriptURL = '<https://script.google.com/macros/s/AKfycbwBkHsw55hXQqlVWBOCFdR3wpw9_5fNnTs6mDeD3x98xPWX2xDKz_OTVGWSEnvPQJCboQ/exec>'
+/*Contact form: the details of the user is sent to a google sheet file*/ 
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwOXCVNKVR6yi2eXDZLqCvx_V7ia44E8gbqAoBZw1X_ev-ra_a7TH1ofXUlVe2ecZC6/exec'
   const form = document.forms['submit-to-google-sheet']
   const popUp = document.getElementById('popUp')
 
@@ -33,11 +33,12 @@ var sidemeu = document.getElementById("sidemenu");
     e.preventDefault()
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
       .then(response => {
-        popUp.innerHTML ="Message sent successfully";
+        popUp.innerHTML ="Message sent sucessfully";
         setTimeout(function(){
             popUp.innerHTML = ""
-        },5000)
+        },3000)
         form.reset()
       })
       .catch(error => console.error('Error!', error.message))
   })
+
