@@ -1,4 +1,4 @@
-# portfolioWebsite
+# myPortfolioWebsite
 My portfolio site. It contains everything about me
 The website is divided into 5 key sections which includes 
 the home, about, services, portfolio and contact
