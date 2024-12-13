@@ -26,11 +26,8 @@ html {
 #header .container {
     padding: 0;
 }
-.logo {
-    font-size: 25px;
-}
-.logo span {
-    color: red;
+.logo{
+    width: 80px;
 }
 nav {
     display: flex;
@@ -69,7 +66,7 @@ nav ul li a:hover::after {
     width: 100%;
 }
 .header-text {
-    margin-top: 10%;
+    margin-top: 15%;
     font-size: 34px;
     padding: 10px;
 }
